@@ -15,7 +15,7 @@ namespace BaseApi.WebApi.Features.Documents.Entities
 
         public bool IsValid()
         {
-            if (string.IsNullOrEmpty(this.Name)) throw new System.Exception("Debe ingresar un nombre");
+            if (string.IsNullOrEmpty(Name)) throw new System.Exception("Debe ingresar un nombre");
             return true;
         }
 

@@ -22,7 +22,7 @@ namespace BaseApi.WebApi.Features.Documents.Services
                           select new DocumentDTO
                           {
                               Id = Document.Id,
-                              Name = Document.Name,
+                              Name = tbUsers.Name,
                               CreateBy = Document.CreateBy,
                               CreatebyDate = Document.CreatebyDate,
                               UpdateBy = Document.UpdateBy,

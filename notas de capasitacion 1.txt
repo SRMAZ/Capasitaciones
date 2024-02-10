@@ -1,0 +1,6 @@
+nostas
+tema es para el stilo del usuario
+
+path es la url (las pantallas que tendra permiso)
+crear carpetas (dto, servicio, entiti(campos de la tabla, validamos campos y  mapeamos las propiedades))
+arcivo controlador
