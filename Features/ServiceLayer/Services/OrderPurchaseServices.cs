@@ -5,6 +5,9 @@ using Newtonsoft.Json;
 using Org.BouncyCastle.Asn1.Crmf;
 using System.Net;
 using System;
+using RestSharp;
+using BaseApi.WebApi.Features.ServiceLayer.DTO;
+using DocumentDTO = BaseApi.WebApi.Features.ServiceLayer.DTO.DocumentDTO;
 
 namespace BaseApi.WebApi.Features.ServiceLayer.Services
 {
@@ -17,7 +20,7 @@ namespace BaseApi.WebApi.Features.ServiceLayer.Services
             _authSapServices = authSapServices;
         }
 
-        public int CreatePurchaseOrder(DocumentDto purchaseOrderModel)
+        public int CreatePurchaseOrder(DocumentDTO purchaseOrderModel)
         {
             var login = _authSapServices.Login();
             if (login)

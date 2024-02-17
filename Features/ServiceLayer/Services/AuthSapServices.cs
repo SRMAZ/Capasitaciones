@@ -3,6 +3,9 @@ using System.Net.Security;
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using System;
+using RestSharp;
+using BaseApi.WebApi.Features.ServiceLayer.DTO;
+using System.Linq;
 
 namespace BaseApi.WebApi.Features.ServiceLayer.Services
 {
