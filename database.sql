@@ -250,3 +250,35 @@ INSERT INTO [dbo].Document
            ,GETDATE())
 GO
 
+
+
+_____________________
+
+use dbbase_SelvinMedina
+
+GO
+CREATE TABLE [Order](
+DocNum int identity(1,1),
+DocEntry int,
+DocDate datetime,
+DocCode nvarchar(50),
+DocTotal decimal(18,2),
+Reference nvarchar(300),
+CreateBy	int
+
+constraint [PK.Order.DocNum] PRIMARY KEY (DocNum),
+constraint [Fk.dbo.Order.CreateBy -> dbo.User.UserId] foreign key (DocNum) references [dbo].[User] ([UserId])
+);
+
+CREATE TABLE OrderDetail(
+IdDatail int identity(1,1),
+IdOrder	int,
+ItemCode nvarchar(50),
+IteamName nvarchar(50),
+Quantity int,
+Price decimal(18,2)
+
+constraint [PK.OrderDetail.IdDatail] PRIMARY KEY (IdDatail)
+constraint [Fk.dbo.OrderDetail.IdOrder -> dbo.Order.UserId] foreign key (IdDatail) references [dbo].[Order] (DocNum)
+
+);

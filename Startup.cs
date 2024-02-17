@@ -14,6 +14,8 @@ using System;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using BaseApi.WebApi.Features.Documents.Services;
+using BaseApi.WebApi.Features.DataMaster.Services;
+using BaseApi.WebApi.Features.Orders.Service;
 
 namespace BaseApi.WebApi
 {
@@ -50,6 +52,8 @@ namespace BaseApi.WebApi
             services.AddTransient<RoleService, RoleService>();
             services.AddTransient<PermissionService, PermissionService>();
             services.AddTransient<DocumentService, DocumentService>();
+            services.AddTransient<DataMasterService, DataMasterService>();
+            services.AddTransient<OrderServices, OrderServices>();
 
             // Configuración de autenticación mediante token
             services.AddTokenAuthentication(Configuration);
