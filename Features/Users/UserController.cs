@@ -21,7 +21,7 @@ namespace BaseApi.WebApi.Features.Users
         {
             try
             {
-                var users = _userService.Get();
+                var users = _userService.                                           ();
                 return Ok(users);
             }
             catch (Exception ex)

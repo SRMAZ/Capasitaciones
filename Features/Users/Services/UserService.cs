@@ -52,6 +52,34 @@ namespace BaseApi.WebApi.Features.Users
             return result;
         }
 
+        public List<UserDto> GetById(int UserId)
+        {
+            var users = _baseApiDbContext.User.ToList();
+            var themes = _baseApiDbContext.Theme.ToList();
+            var roles = _baseApiDbContext.Role.ToList();
+
+            var result = (from u in users
+                          join r in roles on u.RoleId equals r.RoleId into userRole
+                          from r in userRole.DefaultIfEmpty()
+                          join t in themes on u.ThemeId equals t.ThemeId into themeUser
+                          from t in themeUser.DefaultIfEmpty()
+                          select new UserDto
+                          {
+                              Active = u.Active,
+                              Email = u.Email,
+                              Name = u.Name,
+                              Password = null,
+                              RoleId = u.RoleId,
+                              ThemeId = u.ThemeId,
+                              UserId = u.UserId,
+                              UserName = u.UserName,
+                              Role = r?.Description ?? "ROL NO ASIGNADO",
+                              Theme = t?.Description ?? "TEMA NO ASIGNADO"
+                          }
+                          ).ToList();
+            return result;
+        }
+
         public List<UserDto> Add(User user)
         {
             user.IsValid();// Valida los campos
@@ -83,8 +111,19 @@ namespace BaseApi.WebApi.Features.Users
             currentUser.Email = user.Email;
             currentUser.RoleId = user.RoleId;
             currentUser.ThemeId = user.ThemeId;
-            currentUser.Active = user.Active;
+            currentUser.Active = user.Active;                                                                                                                                       
             currentUser.Password = user.Password;
+
+            _baseApiDbContext.SaveChanges();
+            return Get();
+        }
+
+        public List<UserDto> EditActive(int Id)
+        {
+             
+
+            var currentUser = _baseApiDbContext.User.Where(x => x.UserId == Id).FirstOrDefault();
+            currentUser.Active = false;
 
             _baseApiDbContext.SaveChanges();
             return Get();
