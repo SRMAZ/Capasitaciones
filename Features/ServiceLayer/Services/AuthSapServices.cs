@@ -14,6 +14,7 @@ namespace BaseApi.WebApi.Features.ServiceLayer.Services
         public static bool LoginActivo = false;
         public string SLSessionID;
 
+        //Genera el certificado 
         private static bool ValidarCertificado(object sender, X509Certificate cert, X509Chain chain,
             SslPolicyErrors ssl)
         {
@@ -26,12 +27,10 @@ namespace BaseApi.WebApi.Features.ServiceLayer.Services
             {
                 var client = new RestClient($"{Global.sURL}Login");
                 var request = new RestRequest(Method.POST);
-
                 ServicePointManager.Expect100Continue = true;
                 ServicePointManager.DefaultConnectionLimit = 9999;
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls13;
                 ServicePointManager.ServerCertificateValidationCallback = ValidarCertificado;
-
                 request.AddHeader("cache-control", "no-cache");
                 request.AddHeader("content-type", "application/json");
 
@@ -65,11 +64,12 @@ namespace BaseApi.WebApi.Features.ServiceLayer.Services
 
                 return true;
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
         }
 
     }
 }
+
