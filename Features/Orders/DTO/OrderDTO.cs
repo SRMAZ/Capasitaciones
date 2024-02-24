@@ -4,7 +4,7 @@ namespace BaseApi.WebApi.Features.Orders.DTO
 {
     public class OrderDTO : Order
     {
-        public string CreateByName { get; set; }
+        public string CreatedByName { get; set; }
 
     }
 }

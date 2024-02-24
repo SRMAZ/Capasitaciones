@@ -7,12 +7,13 @@ namespace BaseApi.WebApi.Features.Orders.Entities
 
     public class OrderDetail
     {
-        public int IdDatail { get; set; }
+        public int IdDetail { get; set; }
         public int IdOrder { get; set; }
         public string ItemCode { get; set; }
         public string IteamName { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
+        public decimal LineTotal { get; set; }
 
         [JsonIgnore]
         public Order Order { get; set; }
@@ -27,12 +28,13 @@ namespace BaseApi.WebApi.Features.Orders.Entities
         {
             public Map(EntityTypeBuilder<OrderDetail> builder)
             {
-                builder.HasKey(x => x.IdDatail);
+                builder.HasKey(x => x.IdDetail);
                 builder.Property(x => x.IdOrder).HasColumnName("IdOrder");
                 builder.Property(x => x.ItemCode).HasColumnName("ItemCode");
-                builder.Property(x => x.Price).HasColumnName("Price");
                 builder.Property(x => x.IteamName).HasColumnName("IteamName");
                 builder.Property(x => x.Quantity).HasColumnName("Quantity");
+                builder.Property(x => x.Price).HasColumnName("Price");
+                builder.Property(x => x.LineTotal).HasColumnName("LineTotal");
                 builder.HasOne(x => x.Order).WithMany(x => x.Detail).HasForeignKey(x => x.IdOrder);
                 builder.ToTable("OrderDetail");
             }

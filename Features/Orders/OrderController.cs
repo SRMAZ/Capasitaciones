@@ -21,7 +21,7 @@ namespace BaseApi.WebApi.Features.Orders
         {
             try
             {
-                var Document = _OrderServices.GetOrders();
+                var Document = _OrderServices.GetOrder();
                 return Ok(Document);
             }
             catch (System.Exception ex)

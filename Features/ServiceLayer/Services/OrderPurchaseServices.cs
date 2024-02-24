@@ -7,7 +7,6 @@ using System.Net;
 using System;
 using RestSharp;
 using BaseApi.WebApi.Features.ServiceLayer.DTO;
-using DocumentDTO = BaseApi.WebApi.Features.ServiceLayer.DTO.DocumentDTO;
 using System.Text.Json;
 
 namespace BaseApi.WebApi.Features.ServiceLayer.Services
@@ -21,7 +20,7 @@ namespace BaseApi.WebApi.Features.ServiceLayer.Services
             _authSapServices = authSapServices;
         }
 
-        public (int, int) CreatePurchaseOrder(DocumentDto purchaseOrderModel)
+        public (int, int) CreatePurchaseOrder(DocumentsDTO purchaseOrderModel)
         {
             var login = _authSapServices.Login();
             if (login)
@@ -42,7 +41,7 @@ namespace BaseApi.WebApi.Features.ServiceLayer.Services
                     if (response.StatusCode == HttpStatusCode.Created)
                     {
                         // Deserializar el JSON en un objeto para acceder a las propiedades
-                        var responseObject = JsonConvert.DeserializeObject<DocumentDto>(response.Content);
+                        var responseObject = JsonConvert.DeserializeObject<DocumentsDTO>(response.Content);
                         // Acceder a las propiedades
                         int docEntry = responseObject.DocEntry;
                         int docNum = responseObject.DocNum;
