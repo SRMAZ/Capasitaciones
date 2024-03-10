@@ -1,9 +1,9 @@
-﻿using BaseApi.WebApi.Features.Documents.Services;
-using BaseApi.WebApi.Features.Orders.Entities;
-using BaseApi.WebApi.Features.Orders.Service;
+﻿using OrderPurches.WebApi.Features.Documents.Services;
+using OrderPurches.WebApi.Features.Orders.Entities;
+using OrderPurches.WebApi.Features.Orders.Service;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BaseApi.WebApi.Features.Orders
+namespace OrderPurches.WebApi.Features.Orders
 {
     [ApiController]
     [Route("[controller]")]

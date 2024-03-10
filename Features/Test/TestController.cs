@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
 
-namespace BaseApi.WebApi.Common.Test
+namespace OrderPurches.WebApi.Common.Test
 {
     [ApiController]
     [Route("[controller]")]

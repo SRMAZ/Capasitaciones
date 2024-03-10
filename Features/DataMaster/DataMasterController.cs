@@ -1,7 +1,7 @@
-﻿using BaseApi.WebApi.Features.DataMaster.Services;
+﻿using OrderPurches.WebApi.Features.DataMaster.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BaseApi.WebApi.Features.DataMaster
+namespace OrderPurches.WebApi.Features.DataMaster
 {
     [ApiController]
     [Route("[controller]")]

@@ -1,4 +1,4 @@
-﻿namespace BaseApi.WebApi.Features.DataMaster.DTO
+﻿namespace OrderPurches.WebApi.Features.DataMaster.DTO
 {
     public class DataMasterDTO
     {

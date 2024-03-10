@@ -1,6 +1,6 @@
-﻿using BaseApi.WebApi.Features.Orders.Entities;
+﻿using OrderPurches.WebApi.Features.Orders.Entities;
 
-namespace BaseApi.WebApi.Features.Orders.DTO
+namespace OrderPurches.WebApi.Features.Orders.DTO
 {
     public class OrderDTO : Order
     {

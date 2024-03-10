@@ -1,0 +1,329 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\features\\orders\\service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:features\\orders\\service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\features\\orders\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:features\\orders\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\features\\orders\\dto\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:features\\orders\\dto\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\features\\orders\\entities\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:features\\orders\\entities\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\features\\orders\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:features\\orders\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\features\\auth\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:features\\auth\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\features\\servicelayer\\services\\orderpurchaseservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:features\\servicelayer\\services\\orderpurchaseservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\features\\servicelayer\\services\\authsapservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:features\\servicelayer\\services\\authsapservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\orderpurches.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:orderpurches.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\features\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:features\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\features\\mails\\dto\\attachmentemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:features\\mails\\dto\\attachmentemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|c:\\users\\dell\\documents\\github\\capasitaciones\\database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{3D9AAC0E-28EB-45DD-8D75-FAFA5ED85713}|OrderPurches.WebApi.csproj|solutionrelative:database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\Orders\\Service\\OrderService.cs",
+              "RelativeDocumentMoniker": "Features\\Orders\\Service\\OrderService.cs",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\Orders\\Service\\OrderService.cs",
+              "RelativeToolTip": "Features\\Orders\\Service\\OrderService.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwBkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T23:02:05.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\Orders\\DTO\\OrderDTO.cs",
+              "RelativeDocumentMoniker": "Features\\Orders\\DTO\\OrderDTO.cs",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\Orders\\DTO\\OrderDTO.cs",
+              "RelativeToolTip": "Features\\Orders\\DTO\\OrderDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T23:01:59.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\Orders\\Entities\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "Features\\Orders\\Entities\\OrderDetail.cs",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\Orders\\Entities\\OrderDetail.cs",
+              "RelativeToolTip": "Features\\Orders\\Entities\\OrderDetail.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T23:01:53.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\Orders\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "Features\\Orders\\Entities\\Order.cs",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\Orders\\Entities\\Order.cs",
+              "RelativeToolTip": "Features\\Orders\\Entities\\Order.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAcwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T23:01:50.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\Orders\\OrderController.cs",
+              "RelativeDocumentMoniker": "Features\\Orders\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\Orders\\OrderController.cs",
+              "RelativeToolTip": "Features\\Orders\\OrderController.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAUwB8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T21:50:30.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderPurchaseServices.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\ServiceLayer\\Services\\OrderPurchaseServices.cs",
+              "RelativeDocumentMoniker": "Features\\ServiceLayer\\Services\\OrderPurchaseServices.cs",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\ServiceLayer\\Services\\OrderPurchaseServices.cs",
+              "RelativeToolTip": "Features\\ServiceLayer\\Services\\OrderPurchaseServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T21:31:15.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-09T21:22:54.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Startup.cs",
+              "RelativeDocumentMoniker": "Startup.cs",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Startup.cs",
+              "RelativeToolTip": "Startup.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T21:22:44.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T21:22:38.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "database.sql ",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\database.sql",
+              "RelativeDocumentMoniker": "database.sql",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\database.sql",
+              "RelativeToolTip": "database.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-03-09T21:22:30.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\Auth\\AuthController.cs",
+              "RelativeDocumentMoniker": "Features\\Auth\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\Auth\\AuthController.cs",
+              "RelativeToolTip": "Features\\Auth\\AuthController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T21:19:49.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "OrderPurches.WebApi",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\OrderPurches.WebApi.csproj",
+              "RelativeDocumentMoniker": "OrderPurches.WebApi.csproj",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\OrderPurches.WebApi.csproj",
+              "RelativeToolTip": "OrderPurches.WebApi.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-09T21:21:50.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthSapServices.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\ServiceLayer\\Services\\AuthSapServices.cs",
+              "RelativeDocumentMoniker": "Features\\ServiceLayer\\Services\\AuthSapServices.cs",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\ServiceLayer\\Services\\AuthSapServices.cs",
+              "RelativeToolTip": "Features\\ServiceLayer\\Services\\AuthSapServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T21:19:57.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAAAIAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-09T21:19:36.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.Production.json",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\appsettings.Production.json",
+              "RelativeDocumentMoniker": "appsettings.Production.json",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\appsettings.Production.json",
+              "RelativeToolTip": "appsettings.Production.json",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAAAIAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-09T21:19:43.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\Auth\\AuthService.cs",
+              "RelativeDocumentMoniker": "Features\\Auth\\AuthService.cs",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\Auth\\AuthService.cs",
+              "RelativeToolTip": "Features\\Auth\\AuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T21:20:07.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AttachmentEmail.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\Mails\\Dto\\AttachmentEmail.cs",
+              "RelativeDocumentMoniker": "Features\\Mails\\Dto\\AttachmentEmail.cs",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\Features\\Mails\\Dto\\AttachmentEmail.cs",
+              "RelativeToolTip": "Features\\Mails\\Dto\\AttachmentEmail.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAEAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T21:19:45.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\GitHub\\Capasitaciones\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-09T21:19:17.109Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -4,7 +4,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
-namespace BaseApi.WebApi.Features.Orders.Entities
+namespace OrderPurches.WebApi.Features.Orders.Entities
 {
     public class Order
     {

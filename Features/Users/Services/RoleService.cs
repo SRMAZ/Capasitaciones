@@ -1,37 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using BaseApi.WebApi.Features.Users.Dto;
-using BaseApi.WebApi.Features.Users.Entities;
-using BaseApi.WebApi.Helpers;
-using BaseApi.WebApi.Infraestructure;
+using OrderPurches.WebApi.Features.Users.Dto;
+using OrderPurches.WebApi.Features.Users.Entities;
+using OrderPurches.WebApi.Helpers;
+using OrderPurches.WebApi.Infraestructure;
 
-namespace BaseApi.WebApi.Features.Users
+namespace OrderPurches.WebApi.Features.Users
 {
     public class RoleService
     {
-        private readonly BaseApiDbContext _baseApiDbContext;
-        public RoleService(BaseApiDbContext logisticaBtdDbContext)
+        private readonly OrderPurchesDbContext _OrderPurchesDbContext;
+        public RoleService(OrderPurchesDbContext logisticaBtdDbContext)
         {
-            _baseApiDbContext = logisticaBtdDbContext;
+            _OrderPurchesDbContext = logisticaBtdDbContext;
         }
         public List<Role> Get()
         {
-            var roles = _baseApiDbContext.Role.ToList();
+            var roles = _OrderPurchesDbContext.Role.ToList();
             return roles;
         }
         public List<Role> GetActiveOnly()
         {
-            var roles = _baseApiDbContext.Role.Where(x=> x.Active).ToList();
+            var roles = _OrderPurchesDbContext.Role.Where(x=> x.Active).ToList();
             return roles;
         }
 
         public RoleDto RoleWithDetail(int RoleId)
         {
-            var role = _baseApiDbContext.Role.Where(x=> x.RoleId == RoleId).Select(x=> new RoleDto { Active = x.Active, Description = x.Description, RoleId = x.RoleId, Detail = new List<TreeNodeDto>() }).FirstOrDefault();
+            var role = _OrderPurchesDbContext.Role.Where(x=> x.RoleId == RoleId).Select(x=> new RoleDto { Active = x.Active, Description = x.Description, RoleId = x.RoleId, Detail = new List<TreeNodeDto>() }).FirstOrDefault();
             if(role == null) role = new RoleDto{ Active = true, Description = "", RoleId = 0, Detail= new List<TreeNodeDto>()};
-            var rolesPermissions = _baseApiDbContext.RolePermission.Where(x=> x.RoleId == role.RoleId).ToList();
-            List<Permission> permissions = _baseApiDbContext.Permission.ToList();
+            var rolesPermissions = _OrderPurchesDbContext.RolePermission.Where(x=> x.RoleId == role.RoleId).ToList();
+            List<Permission> permissions = _OrderPurchesDbContext.Permission.ToList();
             var roleWithPermissions = (from p in permissions
                                        join rp in rolesPermissions on p.PermissionId equals rp.PermissionId into rolePermisionData
                                        from rp in rolePermisionData.DefaultIfEmpty()
@@ -102,14 +102,14 @@ namespace BaseApi.WebApi.Features.Users
             try
             {
                 role.IsValid();
-                _baseApiDbContext.Database.BeginTransaction();
+                _OrderPurchesDbContext.Database.BeginTransaction();
                 var permissionIds = Helper.TreeNodeToList(role.Detail);
 
                 var permissionsActive = permissionIds.Where(x => x.Active).ToList();
                 if (permissionsActive.Count() == 0) throw new System.Exception("Debe seleccionar al menos un permiso");
 
-                _baseApiDbContext.Role.Add(role);
-                _baseApiDbContext.SaveChanges();
+                _OrderPurchesDbContext.Role.Add(role);
+                _OrderPurchesDbContext.SaveChanges();
 
                 List<RolePermission> rolePermissions = permissionsActive.Select(x => new RolePermission {
                     Active = true,
@@ -117,13 +117,13 @@ namespace BaseApi.WebApi.Features.Users
                     RoleId  = role.RoleId,
                     RolePermissionId = 0
                 }).ToList();
-                _baseApiDbContext.RolePermission.AddRange(rolePermissions);
-                _baseApiDbContext.SaveChanges();
-                _baseApiDbContext.Database.CommitTransaction();
+                _OrderPurchesDbContext.RolePermission.AddRange(rolePermissions);
+                _OrderPurchesDbContext.SaveChanges();
+                _OrderPurchesDbContext.Database.CommitTransaction();
             }
             catch(Exception ex)
             {
-                _baseApiDbContext.Database.RollbackTransaction();
+                _OrderPurchesDbContext.Database.RollbackTransaction();
                 throw new System.Exception(ex.Message);
             }
             return Get();
@@ -135,12 +135,12 @@ namespace BaseApi.WebApi.Features.Users
             {
                 if (role.IsValid())
                 {
-                    _baseApiDbContext.Database.BeginTransaction();
+                    _OrderPurchesDbContext.Database.BeginTransaction();
                     var permissionIds = Helper.TreeNodeToList(role.Detail);
                     var permissionsActive = permissionIds.Where(x => x.Active).ToList();
                     if (permissionsActive.Count() == 0) throw new System.Exception("Debe seleccionar al menos un permiso");
 
-                    var currentRole = _baseApiDbContext.Role.Where(x => x.RoleId == role.RoleId).FirstOrDefault();
+                    var currentRole = _OrderPurchesDbContext.Role.Where(x => x.RoleId == role.RoleId).FirstOrDefault();
                     if (currentRole == null) throw new Exception("Al parecer el rol no existe");
 
                     currentRole.Description = role.Description;
@@ -154,17 +154,17 @@ namespace BaseApi.WebApi.Features.Users
                         
                     }).ToList();
 
-                    var currentPermissions = _baseApiDbContext.RolePermission.Where(x => x.RoleId == currentRole.RoleId).ToList();
-                    _baseApiDbContext.RolePermission.RemoveRange(currentPermissions);
-                    _baseApiDbContext.RolePermission.AddRange(rolePermissions);
+                    var currentPermissions = _OrderPurchesDbContext.RolePermission.Where(x => x.RoleId == currentRole.RoleId).ToList();
+                    _OrderPurchesDbContext.RolePermission.RemoveRange(currentPermissions);
+                    _OrderPurchesDbContext.RolePermission.AddRange(rolePermissions);
 
-                    _baseApiDbContext.SaveChanges();
-                    _baseApiDbContext.Database.CommitTransaction();
+                    _OrderPurchesDbContext.SaveChanges();
+                    _OrderPurchesDbContext.Database.CommitTransaction();
                 }
             }
             catch (Exception ex)
             {
-                _baseApiDbContext.Database.RollbackTransaction();
+                _OrderPurchesDbContext.Database.RollbackTransaction();
                 throw new System.Exception(ex.Message);
             }
             return Get();

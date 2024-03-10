@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 
-namespace BaseApi.WebApi.Features.Documents.Entities
+namespace OrderPurches.WebApi.Features.Documents.Entities
 {
     public class Document
     {

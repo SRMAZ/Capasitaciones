@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System.Text.Json.Serialization;
 
-namespace BaseApi.WebApi.Features.Orders.Entities
+namespace OrderPurches.WebApi.Features.Orders.Entities
 {
 
     public class OrderDetail

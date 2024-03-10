@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using BaseApi.WebApi.Features.Users.Dto;
-using BaseApi.WebApi.Features.Users.Entities;
-using BaseApi.WebApi.Infraestructure;
+using OrderPurches.WebApi.Features.Users.Dto;
+using OrderPurches.WebApi.Features.Users.Entities;
+using OrderPurches.WebApi.Infraestructure;
 
-namespace BaseApi.WebApi.Features.Users.Services
+namespace OrderPurches.WebApi.Features.Users.Services
 {
     public class PermissionService
     {
-        private readonly BaseApiDbContext _baseApiDbContext;
+        private readonly OrderPurchesDbContext _OrderPurchesDbContext;
         private readonly RoleService _roleService;
-        public PermissionService(BaseApiDbContext logisticaBtdDbContext, RoleService roleService)
+        public PermissionService(OrderPurchesDbContext logisticaBtdDbContext, RoleService roleService)
         {
-            _baseApiDbContext = logisticaBtdDbContext;
+            _OrderPurchesDbContext = logisticaBtdDbContext;
             _roleService = roleService;
         }
 
         public Permission GetById(int PermissionId) {
-            var permission = _baseApiDbContext.Permission.Where(x => x.PermissionId == PermissionId).FirstOrDefault();
+            var permission = _OrderPurchesDbContext.Permission.Where(x => x.PermissionId == PermissionId).FirstOrDefault();
             if (permission == null) return new Permission {Active = true, Description = "",Icon = "", FatherId = 0, Path = "", PermissionId = 0, TypeId = 0 };
             return permission;
 
@@ -26,13 +26,13 @@ namespace BaseApi.WebApi.Features.Users.Services
 
         public List<TypePermission> GetTypePermission()
         {
-            var types = _baseApiDbContext.TypePermission.ToList();
+            var types = _OrderPurchesDbContext.TypePermission.ToList();
             return types;
         }
 
         public List<TreeNodeDto> Get()
         {
-            var permissions = _baseApiDbContext.Permission.Select(x=> new PermissionDto
+            var permissions = _OrderPurchesDbContext.Permission.Select(x=> new PermissionDto
             {
                 Active = x.Active,
                 Description = x.Description,
@@ -67,15 +67,15 @@ namespace BaseApi.WebApi.Features.Users.Services
         {
             permission.IsValid();
             permission.Active = true;
-            _baseApiDbContext.Permission.Add(permission);
-            _baseApiDbContext.SaveChanges();
+            _OrderPurchesDbContext.Permission.Add(permission);
+            _OrderPurchesDbContext.SaveChanges();
             return Get();
         }
 
         public List<TreeNodeDto> Edit(Permission permission)
         {
             permission.IsValid();
-            var currentPermission = _baseApiDbContext.Permission.Where(x => x.PermissionId == permission.PermissionId).FirstOrDefault();
+            var currentPermission = _OrderPurchesDbContext.Permission.Where(x => x.PermissionId == permission.PermissionId).FirstOrDefault();
             if (currentPermission == null) throw new Exception("El permiso seleccionado no existe");
             currentPermission.Active = permission.Active;
             currentPermission.Description = permission.Description;
@@ -83,7 +83,7 @@ namespace BaseApi.WebApi.Features.Users.Services
             currentPermission.Icon = permission.Icon;
             currentPermission.TypeId = permission.TypeId;
             currentPermission.PermissionId = permission.PermissionId;
-            _baseApiDbContext.SaveChanges();
+            _OrderPurchesDbContext.SaveChanges();
             return Get();
         }
 

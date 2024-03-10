@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using BaseApi.WebApi.Features.Users.Entities;
-using BaseApi.WebApi.Features.Common.Dto;
+using OrderPurches.WebApi.Features.Users.Entities;
+using OrderPurches.WebApi.Features.Common.Dto;
 
-namespace DBaseApi.Features.Auth.Dto
+namespace DOrderPurches.Features.Auth.Dto
 {
     public class UserDto : User
     {

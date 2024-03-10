@@ -1,10 +1,10 @@
-﻿using BaseApi.WebApi.Features.Documents.Entities;
-using BaseApi.WebApi.Features.Documents.Services;
+﻿using OrderPurches.WebApi.Features.Documents.Entities;
+using OrderPurches.WebApi.Features.Documents.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BaseApi.WebApi.Features.Documents
+namespace OrderPurches.WebApi.Features.Documents
 {
     [Route("api/[controller]")]
     [ApiController]

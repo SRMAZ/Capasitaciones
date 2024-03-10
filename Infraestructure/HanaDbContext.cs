@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Sap.Data.Hana;
 
-namespace BaseApi.WebApi.Infraestructure
+namespace OrderPurches.WebApi.Infraestructure
 {
     public class HanaDbContext
     {

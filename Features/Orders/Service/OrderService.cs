@@ -1,22 +1,22 @@
-﻿using BaseApi.WebApi.Features.Documents.DTO;
-using BaseApi.WebApi.Features.Orders.DTO;
-using BaseApi.WebApi.Features.Orders.Entities;
-using BaseApi.WebApi.Features.ServiceLayer.DTO;
-using BaseApi.WebApi.Features.ServiceLayer.Services;
-using BaseApi.WebApi.Infraestructure;
+﻿using OrderPurches.WebApi.Features.Documents.DTO;
+using OrderPurches.WebApi.Features.Orders.DTO;
+using OrderPurches.WebApi.Features.Orders.Entities;
+using OrderPurches.WebApi.Features.ServiceLayer.DTO;
+using OrderPurches.WebApi.Features.ServiceLayer.Services;
+using OrderPurches.WebApi.Infraestructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BaseApi.WebApi.Features.Orders.Service
+namespace OrderPurches.WebApi.Features.Orders.Service
 {
     public class OrderServices
     {
-        private readonly BaseApiDbContext _context;
+        private readonly OrderPurchesDbContext _context;
         private readonly OrderPurchaseServices _serviceSap;
 
-        public OrderServices(BaseApiDbContext context, OrderPurchaseServices serviceSap)
+        public OrderServices(OrderPurchesDbContext context, OrderPurchaseServices serviceSap)
         {
             _context = context;
             _serviceSap = serviceSap;

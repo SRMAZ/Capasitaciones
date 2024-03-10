@@ -1,12 +1,12 @@
 ﻿using System;
-using BaseApi.WebApi.Features.Common.Entities;
-using BaseApi.WebApi.Helpers;
+using OrderPurches.WebApi.Features.Common.Entities;
+using OrderPurches.WebApi.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Net.Http.Headers;
 
-namespace BaseApi.WebApi.Features.Common
+namespace OrderPurches.WebApi.Features.Common
 {
     [Route("api/[controller]")]
     [ApiController]

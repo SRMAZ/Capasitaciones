@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using BaseApi.WebApi.Features.Users.Entities;
+using OrderPurches.WebApi.Features.Users.Entities;
 
-namespace BaseApi.WebApi.Features.Users.Dto
+namespace OrderPurches.WebApi.Features.Users.Dto
 {
     public class RoleDto :Role
     {

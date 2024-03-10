@@ -1,34 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using DBaseApi.Features.Auth.Dto;
-using BaseApi.WebApi.Features.Users.Entities;
-using BaseApi.WebApi.Features.Common.Entities;
-using BaseApi.WebApi.Infraestructure;
+using DOrderPurches.Features.Auth.Dto;
+using OrderPurches.WebApi.Features.Users.Entities;
+using OrderPurches.WebApi.Features.Common.Entities;
+using OrderPurches.WebApi.Infraestructure;
 using Microsoft.Extensions.Configuration;
-using BaseApi.WebApi.Helpers;
+using OrderPurches.WebApi.Helpers;
 using Sap.Data.Hana;
 
-namespace BaseApi.WebApi.Features.Users
+namespace OrderPurches.WebApi.Features.Users
 {
     public class UserService
     {
-        private readonly BaseApiDbContext _baseApiDbContext;
+        private readonly OrderPurchesDbContext _OrderPurchesDbContext;
         private readonly IConfiguration _configuration;
         private readonly HanaDbContext _hanaDbContext;
 
-        public UserService(BaseApiDbContext baseApiDbContext, IConfiguration configuration, HanaDbContext hanaDbContext)
+        public UserService(OrderPurchesDbContext OrderPurchesDbContext, IConfiguration configuration, HanaDbContext hanaDbContext)
         {
-            _baseApiDbContext = baseApiDbContext;
+            _OrderPurchesDbContext = OrderPurchesDbContext;
             _configuration = configuration;
             _hanaDbContext = hanaDbContext;         
         }
 
         public List<UserDto> Get()
         {
-            var users = _baseApiDbContext.User.ToList();
-            var themes = _baseApiDbContext.Theme.ToList();
-            var roles = _baseApiDbContext.Role.ToList();
+            var users = _OrderPurchesDbContext.User.ToList();
+            var themes = _OrderPurchesDbContext.Theme.ToList();
+            var roles = _OrderPurchesDbContext.Role.ToList();
 
             var result = (from u in users
                           join r in roles on u.RoleId equals r.RoleId into userRole
@@ -63,8 +63,8 @@ namespace BaseApi.WebApi.Features.Users
             user.UserName = user.UserName.Trim().ToLower();
 
             //Agrega campos a la base
-            _baseApiDbContext.User.Add(user);
-            _baseApiDbContext.SaveChanges(); //asegura que los campos se guarden
+            _OrderPurchesDbContext.User.Add(user);
+            _OrderPurchesDbContext.SaveChanges(); //asegura que los campos se guarden
             return Get();
         }
 
@@ -78,7 +78,7 @@ namespace BaseApi.WebApi.Features.Users
                 user.Password = Helper.EncryptPassword(user.Password.Trim(), _configuration);
             }
 
-            var currentUser = _baseApiDbContext.User.Where(x => x.UserId == user.UserId).FirstOrDefault();
+            var currentUser = _OrderPurchesDbContext.User.Where(x => x.UserId == user.UserId).FirstOrDefault();
             currentUser.Name = user.Name;
             currentUser.Email = user.Email;
             currentUser.RoleId = user.RoleId;
@@ -86,13 +86,13 @@ namespace BaseApi.WebApi.Features.Users
             currentUser.Active = user.Active;
             currentUser.Password = user.Password;
 
-            _baseApiDbContext.SaveChanges();
+            _OrderPurchesDbContext.SaveChanges();
             return Get();
         }
 
         public List<Theme> GetThemes()
         {
-            var themes = _baseApiDbContext.Theme.ToList();
+            var themes = _OrderPurchesDbContext.Theme.ToList();
             return themes;
         }
 

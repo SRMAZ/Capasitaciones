@@ -1,4 +1,4 @@
-﻿using BaseApi.WebApi.Features.Documents.DTO;
+﻿using OrderPurches.WebApi.Features.Documents.DTO;
 using Microsoft.OpenApi.Models;
 using Microsoft.VisualBasic;
 using Newtonsoft.Json;
@@ -6,10 +6,10 @@ using Org.BouncyCastle.Asn1.Crmf;
 using System.Net;
 using System;
 using RestSharp;
-using BaseApi.WebApi.Features.ServiceLayer.DTO;
+using OrderPurches.WebApi.Features.ServiceLayer.DTO;
 using System.Text.Json;
 
-namespace BaseApi.WebApi.Features.ServiceLayer.Services
+namespace OrderPurches.WebApi.Features.ServiceLayer.Services
 {
     public class OrderPurchaseServices
     {

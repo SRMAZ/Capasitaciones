@@ -1,16 +1,16 @@
-﻿using BaseApi.WebApi.Features.Documents.DTO;
-using BaseApi.WebApi.Features.Documents.Entities;
-using BaseApi.WebApi.Infraestructure;
+﻿using OrderPurches.WebApi.Features.Documents.DTO;
+using OrderPurches.WebApi.Features.Documents.Entities;
+using OrderPurches.WebApi.Infraestructure;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BaseApi.WebApi.Features.Documents.Services
+namespace OrderPurches.WebApi.Features.Documents.Services
 {
     public class DocumentService
     {
-        private readonly BaseApiDbContext _context;
+        private readonly OrderPurchesDbContext _context;
 
-        public DocumentService(BaseApiDbContext context)
+        public DocumentService(OrderPurchesDbContext context)
         {
             _context = context;
         }

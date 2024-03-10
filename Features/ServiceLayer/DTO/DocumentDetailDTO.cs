@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BaseApi.WebApi.Features.ServiceLayer.DTO
+namespace OrderPurches.WebApi.Features.ServiceLayer.DTO
 {
     public class DocumentDetailDTO
     {

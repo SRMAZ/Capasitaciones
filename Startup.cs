@@ -1,9 +1,9 @@
-using BaseApi.WebApi.Features.Auth;
-using BaseApi.WebApi.Features.Common;
-using BaseApi.WebApi.Features.Users;
-using BaseApi.WebApi.Features.Users.Services;
-using BaseApi.WebApi.Helpers;
-using BaseApi.WebApi.Infraestructure;
+using OrderPurches.WebApi.Features.Auth;
+using OrderPurches.WebApi.Features.Common;
+using OrderPurches.WebApi.Features.Users;
+using OrderPurches.WebApi.Features.Users.Services;
+using OrderPurches.WebApi.Helpers;
+using OrderPurches.WebApi.Infraestructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -13,12 +13,12 @@ using Microsoft.Extensions.Hosting;
 using System;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using BaseApi.WebApi.Features.Documents.Services;
-using BaseApi.WebApi.Features.DataMaster.Services;
-using BaseApi.WebApi.Features.Orders.Service;
-using BaseApi.WebApi.Features.ServiceLayer.Services;
+using OrderPurches.WebApi.Features.Documents.Services;
+using OrderPurches.WebApi.Features.DataMaster.Services;
+using OrderPurches.WebApi.Features.Orders.Service;
+using OrderPurches.WebApi.Features.ServiceLayer.Services;
 
-namespace BaseApi.WebApi
+namespace OrderPurches.WebApi
 {
     public class Startup
     {
@@ -34,13 +34,13 @@ namespace BaseApi.WebApi
             // Configuración de Swagger para documentación de la API
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "BaseApi.WebApi", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "OrderPurches.WebApi", Version = "v1" });
             });
 
             // Configuración del contexto de base de datos
-            services.AddDbContext<BaseApiDbContext>(
+            services.AddDbContext<OrderPurchesDbContext>(
                 dbContextOptions => dbContextOptions
-                    .UseSqlServer(Configuration.GetConnectionString("dbBaseApi"))
+                    .UseSqlServer(Configuration.GetConnectionString("dbOrderPurches"))
                     .EnableSensitiveDataLogging()
                     .EnableDetailedErrors()
             );
@@ -72,7 +72,7 @@ namespace BaseApi.WebApi
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BaseApiApi v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "OrderPurchesApi v1"));
             }
 
             app.UseHttpsRedirection();
@@ -86,7 +86,7 @@ namespace BaseApi.WebApi
               .AllowAnyHeader());
 
             app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BaseApi.WebApi v1"));
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "OrderPurches.WebApi v1"));
             app.UseAuthentication();
             app.UseAuthorization();
        

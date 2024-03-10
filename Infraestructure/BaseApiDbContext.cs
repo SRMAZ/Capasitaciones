@@ -1,14 +1,14 @@
-﻿using BaseApi.WebApi.Features.Users.Entities;
-using BaseApi.WebApi.Features.Common.Entities;
+﻿using OrderPurches.WebApi.Features.Users.Entities;
+using OrderPurches.WebApi.Features.Common.Entities;
 using Microsoft.EntityFrameworkCore;
-using BaseApi.WebApi.Features.Documents.Entities;
-using BaseApi.WebApi.Features.Orders.Entities;
+using OrderPurches.WebApi.Features.Documents.Entities;
+using OrderPurches.WebApi.Features.Orders.Entities;
 
-namespace BaseApi.WebApi.Infraestructure
+namespace OrderPurches.WebApi.Infraestructure
 {
-    public class BaseApiDbContext : DbContext
+    public class OrderPurchesDbContext : DbContext
     {
-        public BaseApiDbContext(DbContextOptions<BaseApiDbContext> options) : base(options)
+        public OrderPurchesDbContext(DbContextOptions<OrderPurchesDbContext> options) : base(options)
         {
         }
         //Aqui agregamos las tablas que tenemos en la base de datos 

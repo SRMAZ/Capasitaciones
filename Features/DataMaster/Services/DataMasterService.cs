@@ -1,9 +1,9 @@
-﻿using BaseApi.WebApi.Features.DataMaster.DTO;
-using BaseApi.WebApi.Infraestructure;
+﻿using OrderPurches.WebApi.Features.DataMaster.DTO;
+using OrderPurches.WebApi.Infraestructure;
 using Sap.Data.Hana;
 using System.Collections.Generic;
 
-namespace BaseApi.WebApi.Features.DataMaster.Services
+namespace OrderPurches.WebApi.Features.DataMaster.Services
 {
     public class DataMasterService
     {
