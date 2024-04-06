@@ -75,18 +75,18 @@ namespace OrderPurches.WebApi.Features.Users
             }
         }
 
-        [HttpGet("Sellers")]
-        public IActionResult GetSellers()
-        {
-            try
-            {
-                var result = _userService.GetSellersSAP();
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
-        }
+        //[HttpGet("Sellers")]
+        //public IActionResult GetSellers()
+        //{
+        //    try
+        //    {
+        //        var result = _userService.GetSellersSAP();
+        //        return Ok(result);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(new { message = ex.Message });
+        //    }
+        //}
     }
 }

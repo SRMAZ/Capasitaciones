@@ -63,5 +63,35 @@ namespace OrderPurches.WebApi.Features.Documents
             }
         }
 
+        [HttpPut]
+        public ActionResult Update(Document request)
+        {
+            try
+            {
+                var result = _documentService.Update(request);
+                return Ok(result);
+            }
+            catch (System.Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+        }
+        
+        [HttpDelete]
+        public ActionResult Delete(Document request)
+        {
+            try
+            {
+                var result = _documentService.Delete(request);
+                return Ok(result);
+            }
+            catch (System.Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }

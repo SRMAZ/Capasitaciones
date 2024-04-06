@@ -7,7 +7,7 @@ using OrderPurches.WebApi.Features.Common.Entities;
 using OrderPurches.WebApi.Infraestructure;
 using Microsoft.Extensions.Configuration;
 using OrderPurches.WebApi.Helpers;
-using Sap.Data.Hana;
+//using Sap.Data.Hana;
 
 namespace OrderPurches.WebApi.Features.Users
 {
@@ -96,22 +96,22 @@ namespace OrderPurches.WebApi.Features.Users
             return themes;
         }
 
-        public List<string> GetSellersSAP()
-        {
-            List<string> result = new List<string>();
-            _hanaDbContext.Conn.Open();
-            string query = $@"SELECT ""SlpName"" FROM ""FERTICA_PRD"".""OSLP"" WHERE ""U_OS_CODIGO"" IS NOT NULL";
-            HanaCommand selectCmd = new HanaCommand(query, _hanaDbContext.Conn);
-            HanaDataReader dr = selectCmd.ExecuteReader();
-            while (dr.Read())
-            {
-                string slpName = dr.GetString(0);
-                result.Add(slpName);
-            }
-            dr.Close();
-            _hanaDbContext.Conn.Close();
-            return result;
-        }
+        //public List<string> GetSellersSAP()
+        //{
+        //    List<string> result = new List<string>();
+        //    _hanaDbContext.Conn.Open();
+        //    string query = $@"SELECT ""SlpName"" FROM ""FERTICA_PRD"".""OSLP"" WHERE ""U_OS_CODIGO"" IS NOT NULL";
+        //    HanaCommand selectCmd = new HanaCommand(query, _hanaDbContext.Conn);
+        //    HanaDataReader dr = selectCmd.ExecuteReader();
+        //    while (dr.Read())
+        //    {
+        //        string slpName = dr.GetString(0);
+        //        result.Add(slpName);
+        //    }
+        //    dr.Close();
+        //    _hanaDbContext.Conn.Close();
+        //    return result;
+        //}
 
     }
 }

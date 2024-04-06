@@ -10,7 +10,7 @@ namespace OrderPurches.WebApi.Features.Documents.DTO
     public class DocumentDTO: Document
     {
 
-        public string Name { get; set; }
+        public string userName { get; set; }
 
 
     }

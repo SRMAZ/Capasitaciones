@@ -22,7 +22,8 @@ namespace OrderPurches.WebApi.Features.Documents.Services
                           select new DocumentDTO
                           {
                               Id = Document.Id,
-                              Name = tbUsers.Name,
+                              Name = Document.Name,
+                              userName = tbUsers.Name,
                               CreateBy = Document.CreateBy,
                               CreatebyDate = Document.CreatebyDate,
                               UpdateBy = Document.UpdateBy,
@@ -42,6 +43,7 @@ namespace OrderPurches.WebApi.Features.Documents.Services
                           {
                               Id = Document.Id,
                               Name = Document.Name,
+                              userName = tbUsers.Name,
                               CreateBy = Document.CreateBy,
                               CreatebyDate = Document.CreatebyDate,
                               UpdateBy = Document.UpdateBy,
@@ -57,6 +59,23 @@ namespace OrderPurches.WebApi.Features.Documents.Services
             request.IsValid();
 
             _context.Document.Add(request);
+            _context.SaveChanges();
+            return GetDocument();
+        }
+        
+        public List<DocumentDTO> Update(Document request)
+        {
+            request.IsValid();
+            _context.Document.Update(request);
+            _context.SaveChanges();
+            return GetDocument();
+        }
+        
+        public List<DocumentDTO> Delete(Document request)
+        {
+            request.IsValid();
+
+            _context.Document.Remove(request);
             _context.SaveChanges();
             return GetDocument();
         }
