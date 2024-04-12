@@ -2,6 +2,7 @@
 using OrderPurches.WebApi.Features.Orders.Entities;
 using OrderPurches.WebApi.Features.Orders.Service;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace OrderPurches.WebApi.Features.Orders
 {
@@ -46,5 +47,19 @@ namespace OrderPurches.WebApi.Features.Orders
             }
         }
 
+        [HttpGet("GetOrderByDate/{fro}/{to}")]
+        public ActionResult GetOrderByDate(DateTime fro, DateTime to)
+        {
+            try
+            {
+                var Document = _OrderServices.GetOrderByDate(fro,to);
+                return Ok(Document);
+            }
+            catch (System.Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

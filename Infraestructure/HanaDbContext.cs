@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
-//using Sap.Data.Hana;
+using Sap.Data.Hana;
 
 namespace OrderPurches.WebApi.Infraestructure
 {
@@ -7,14 +7,14 @@ namespace OrderPurches.WebApi.Infraestructure
     {
         private readonly IConfiguration _config;
         public string ConnectionString { get; private set; }
-        //public HanaConnection Conn { get; private set; }
+        public HanaConnection Conn { get; private set; }
 
         public HanaDbContext(IConfiguration config)
         {
-            //_config = config;
-            //ConnectionString = _config["connectionStringHana"];
-            //Conn = new HanaConnection();
-            //Conn.ConnectionString = ConnectionString;
+            _config = config;
+            ConnectionString = _config["connectionStringHana"];
+            Conn = new HanaConnection();
+            Conn.ConnectionString = ConnectionString;
         }
     }
 

@@ -40,6 +40,25 @@ namespace OrderPurches.WebApi.Features.Orders.Service
                           }).ToList();
             return result;
         }
+        public List<OrderDTO> GetOrderByDate(DateTime fro, DateTime to)
+        {
+            var result = (from o in _context.Order
+                          join u in _context.User on o.CreatedBy equals u.UserId
+                          where o.DocDate.Date >= fro.Date && o.DocDate.Date <= to.Date
+                          select new OrderDTO
+                          {
+                              Id = o.Id,
+                              DocNum = o.DocNum,
+                              DocEntry = o.DocEntry,
+                              CardCode = o.CardCode,
+                              DocDate = o.DocDate,
+                              Reference = o.Reference,
+                              CreatedBy = o.CreatedBy,
+                              CreatedByName = u.Name,
+                              Detail = (_context.OrderDetail.Where(x => x.IdOrder == o.Id).ToList())
+                          }).ToList();
+            return result;
+        }
 
         public List<OrderDTO> AddOrder(Order request)
         {

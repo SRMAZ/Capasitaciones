@@ -77,13 +77,13 @@ namespace OrderPurches.WebApi.Features.Documents
                 return BadRequest(ex.Message);
             }
         }
-        
-        [HttpDelete]
-        public ActionResult Delete(Document request)
+
+        [HttpDelete("Delete/{Id}")]
+        public ActionResult Delete(int Id)
         {
             try
             {
-                var result = _documentService.Delete(request);
+                var result = _documentService.Delete(Id);
                 return Ok(result);
             }
             catch (System.Exception ex)

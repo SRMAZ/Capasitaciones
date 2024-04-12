@@ -71,11 +71,12 @@ namespace OrderPurches.WebApi.Features.Documents.Services
             return GetDocument();
         }
         
-        public List<DocumentDTO> Delete(Document request)
+        public List<DocumentDTO> Delete(int Id)
         {
-            request.IsValid();
 
-            _context.Document.Remove(request);
+            var data =  _context.Document.Where(x => x.Id == Id).FirstOrDefault();
+
+            _context.Document.Remove(data);
             _context.SaveChanges();
             return GetDocument();
         }
